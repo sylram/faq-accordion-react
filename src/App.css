@@ -29,7 +29,7 @@
 
 .content {
   background-color: hsl(0, 0%, 100%);
-  width: 600px;
+  width: 525px;
   max-width: 80%;
   padding: 15px;
   border-radius: 20px;
@@ -38,33 +38,49 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); */
-
   }
 
+  
+  .header .icon-star {
+    padding: 0 20px 8px 15px; 
+  }
+  
   .header {
     color: hsl(292, 42%, 14%);
     font-weight: 800;
     font-family: WorkSans-Bold;
     font-size: 3.5rem;
-   
+    text-align: left;
+    margin: 15px;
+    
+  }
+
+  .acc-header {
+    background-color: none;
+  }
+
+  .acc-header button:hover{
+   color: #AD28EB;
+  }
+
+  .acc-header button{
+    color: hsl(292, 42%, 14%);
+    font-family: WorkSans-SemiBold;
+    border: none;
+  }
+
+  .acc-header > button::after{
+    background-image: url(./images/icon-plus.svg);
+  }
+
+.acc-header > button:not(.collapsed)::after{
+  background-image: url(./images/icon-minus.svg);
 }
-
-.acc-header {
-  background-color: none;
-}
-
-.acc-header button{
-  color: hsl(292, 42%, 14%);
-  font-family: WorkSans-SemiBold;
-  border: none;
-
-}
-
-
 
 .acc-header button:not(.collapsed) {
   background-color: hsl(0, 0%, 100%);
   border: none;
+  color: hsl(292, 42%, 14%);
 }
 
 .acc-body {
@@ -73,6 +89,25 @@
   font-family: WorkSans-Regular;
 }
 
+@media only screen and (max-width: 600px) {
+  .App {
+    background-image: url('./images/background-pattern-mobile.svg');
+  }
+  
+  .header{
+    font-size: 2rem;
+  }
+
+  .header img {
+    max-width: 25px;
+  }
+
+  .content {
+    margin: 21px;
+    padding: 9px;
+    max-width: 90%;
+  }
+}
 
 
 
